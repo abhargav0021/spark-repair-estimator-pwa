@@ -1,0 +1,11 @@
+{
+  "name": "Spark Repair Estimator",
+  "short_name": "Spark",
+  "description": "Offline repair cost estimator for acquisition walkthroughs.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#F1F2F0",
+  "theme_color": "#F1F2F0",
+  "icons": []
+}

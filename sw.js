@@ -1,4 +1,4 @@
-const CACHE_NAME = "spark-pwa-v2";
+const CACHE_NAME = "spark-pwa-v8";
 const FONT_CSS_URL = "https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600&display=swap";
 
 const PRECACHE_URLS = [
@@ -8,7 +8,13 @@ const PRECACHE_URLS = [
   FONT_CSS_URL,
   "https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js",
   "https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js",
-  "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js",
+  // Tesseract entry + everything it fetches at runtime (URLs captured from a
+  // live OCR run) so OCR works offline even if never used online first.
+  "https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js",
+  "https://cdn.jsdelivr.net/npm/tesseract.js@v5.1.1/dist/worker.min.js",
+  "https://cdn.jsdelivr.net/npm/tesseract.js-core@v5.1.1/tesseract-core-simd-lstm.wasm.js",
+  "https://cdn.jsdelivr.net/npm/tesseract.js-core@v5.1.1/tesseract-core-lstm.wasm.js", // non-SIMD fallback
+  "https://cdn.jsdelivr.net/npm/@tesseract.js-data/eng/4.0.0_best_int/eng.traineddata.gz",
 ];
 
 self.addEventListener("install", event => {

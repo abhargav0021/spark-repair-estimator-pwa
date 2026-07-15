@@ -34,6 +34,8 @@ The main UX is organized around fast field entry:
 - room pills and group cards for quick walkthrough navigation
 - fixed item rows with item name, price/unit, quantity, and line total
 - deterministic review assistant for missed-cost flags, scope summary, and materials list
+- offline Field Assistant chat: price/progress questions, follow-ups, a field-term glossary, and deep-link answer chips
+- global pricing editor in Settings with sticky search, collapsible sections, and confirmed reset
 - export package with workbook, notes, and photos
 
 ## Libraries / External Resources
